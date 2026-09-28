@@ -354,6 +354,21 @@ header{padding-bottom:48px}
  #people .cohost-portrait{width:100%;height:clamp(320px,100vw,440px);margin:0 auto}
  #people .cohost-portrait img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:50% 0%;aspect-ratio:auto}
 }
+
+/* Reset the legacy 270px mobile image cap and center the actual face. */
+@media(max-width:760px){
+ #people .host>div>p:last-child{margin-bottom:0}
+ #people .cohost{margin-top:64px;padding-top:48px;row-gap:32px}
+ #people .cohost-portrait{position:relative;width:100%;height:auto;aspect-ratio:1 / 1.08;margin:0 auto;overflow:hidden}
+ #people .cohost-portrait img{position:absolute;top:0;left:50%;width:140%;max-width:none;height:auto;max-height:none;object-fit:initial;object-position:initial;aspect-ratio:auto;transform:translateX(-47%);margin:0}
+ #people .cohost>div:last-child{padding-top:8px}
+}
+
+/* Mobile half-length portrait: include crossed arms and waist, not a bust close-up. */
+@media(max-width:760px){
+ #people .cohost-portrait{aspect-ratio:1 / 1.35}
+ #people .cohost-portrait img{width:110%;max-width:none;height:auto;top:0;left:50%;transform:translateX(-47%)}
+}
 </style></head><body>
 <div class="review"><span>INVESTMENT EXPO 2027</span><span>関係者閲覧用 / PRIVATE PREVIEW</span></div>
 <header><a class="logo" href="#">投資EXPO<small>2027 TOKYO</small></a><nav aria-label="メインメニュー"><a href="#about">コンセプト</a><a href="#program">プログラム</a><a href="#vip">VIP特典</a><a href="#partners">出展・協賛</a><a class="btn" href="#entry">来場登録 ↗</a></nav></header>
